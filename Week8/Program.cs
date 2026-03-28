@@ -12,8 +12,7 @@ for (int i = 0; i < 10000; i++)
     container.AddItem(item);
 }
 Console.WriteLine($"Total size before GC: {container.GetTotalSize()} bytes");
-// TODO: call GC.Collect()
-
+// GetTotalSize не зменшився тому що контейнер зберігає посилання і через це не зникають посилання
 GC.Collect();
 Console.WriteLine("GC.Collect() was called.");
 Console.WriteLine($"Total size after GC: {container.GetTotalSize()} bytes");
