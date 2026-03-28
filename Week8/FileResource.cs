@@ -9,7 +9,7 @@ public class FileResource : Resource, IDisposable
     
     public void Dispose()
     {
-        Close();
-        Console.WriteLine("Diagnostic message. File closed");
+            Close();
+            Console.WriteLine("Diagnostic message. File closed");
     }
 }
